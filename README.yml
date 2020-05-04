@@ -1,5 +1,5 @@
 # Objective
-Using a DynamoDB table to capture specific tweet aspects from Kinesis.Deleting a specific tweet and automatically archive those deleted items to storage medium(S3) Using AWS Lambda and Amazon Kinesis Firehose.The AWS Tools used are Kinesis Streams, DynamoDB, Kinesis-Firehose,Lambda,Sagemaker and S3 services.
+Using a DynamoDB table to capture specific tweet IDs aspects from Kinesis.Another streaming with the Deletion of tweets to be automatically archived to storage medium(S3) Using AWS Lambda and Amazon Kinesis Firehose.The AWS Tools used are Kinesis Streams, DynamoDB, Kinesis-Firehose,Lambda,Sagemaker and S3 services.
 
 At a high level, this project takes you through the following steps:
 
