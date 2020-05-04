@@ -148,7 +148,7 @@ table = dynamodb.Table('hashtags')
 
 ```
 
-Create a cm folder 
+Parsing the tweets and setting a counter 
 
 ```
 
@@ -169,7 +169,7 @@ while 1==1:
                         response = table.update_item(
                                 Key={
                                     'hashtag': htag 
-                            }, #updating the counter if hashtags exists
+                            }, 
                             UpdateExpression="set htCount  = htCount + :val",
                             ConditionExpression="attribute_exists(hashtag)",
                             ExpressionAttributeValues={
@@ -177,7 +177,7 @@ while 1==1:
                             },
                             ReturnValues="UPDATED_NEW"
                         )
-                    else: #not updating the counter if hashtags not exist
+                    else: 
                                         response = table.update_item(
                                                 Key={
                                                         'hashtag': htag
