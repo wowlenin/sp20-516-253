@@ -13,7 +13,7 @@ Validate that the application works.
 #### Architecture of this workflow in AWS
 ![Architecture Diagram](images/StreamingImagetodynamodb.png)
 
-![Architecture Diagram](images/SStoringDeletedTweetss3.png)
+![Architecture Diagram](images/StoringDeletedTweetss3.png)
 
 
 #### What is AWS Dynamodb?
