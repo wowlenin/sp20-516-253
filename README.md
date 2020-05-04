@@ -10,10 +10,10 @@ Create a Lambda function to poll the DynamoDB stream and deliver batch records f
 Create a Firehose delivery stream to load the data into S3.
 Validate that the application works.
 
-#### Architecture of this workflow in AWS(Streaming Tweets to DDB)
+#### Architecture of workflow1 in AWS(Streaming Tweets to DDB)
 ![Architecture Diagram](images/StreamingImagetodynamodb.png)
 
-#### Architecture of this workflow in AWS(Deleting Tweets to S3)
+#### Architecture of workflow2 in AWS(Deleting Tweets and storing in S3)
 ![Architecture Diagram](images/StoringDeletedTweetss3.png)
 
 
