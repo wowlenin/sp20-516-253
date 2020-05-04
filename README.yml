@@ -11,6 +11,8 @@ Create a Firehose delivery stream to load the data into S3.
 Validate that the application works.
 
 #### Architecture of this workflow in AWS
+![Architecture Diagram](images/StreamingImagetodynamodb.png)
+![Architecture Diagram](images/SStoringDeletedTweetss3.png)
 
 
 #### What is AWS Dynamodb?
