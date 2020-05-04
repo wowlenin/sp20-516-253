@@ -43,6 +43,7 @@ Amazon Kinesis makes it easy to collect, process, and analyze real-time, streami
 
 python 3.6.9
 install TwitterAPI
+install python-twitter
 
 ## Installation
 
