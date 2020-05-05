@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Real Time Processing - Part 2
+# # Streaming Deleting Dynamodb tweets and storing in s3
 # 
 # 
 # ## Using a DynamoDB table to capture specific tweet aspects from Kinesis
 
-# ### This notebook provides the necessary code to create a dynamoDB table, with the hashtag as the partition key (Primary Key).
+# ### This notebook provides the necessary code to create a dynamoDB table, with the twitterID as the partition key (Primary Key).
 
-# Creating the DynamoDB table, with the hashtag as the primary key. Read and Write capacity provisioning is kept low. The boto3 library is used to interface to Jupyter
+# Creating the DynamoDB table, with the twitterID as the primary key. 
 
 # In[46]:
 
@@ -41,12 +41,6 @@ table.meta.client.get_waiter('table_exists').wait(TableName='twitterDB1')
 
 # ### Linking the Kinesis stream to DynamoDB, parsing and storing tweets
 
-# Parsing the results from Kinesis in JSON , extracting the hashtag and submitting the input into table.update_item(…). The table.update_item is a larger request in JSON to increment by 1 if it exists, and put 1 otherwise (not increment).
-# 
-# Thus the hashtag counter increases by 1 each time it detects the hashtag associated with it (for every tweet)
-
-# In[47]:
-
 
 ## Importing the necessary libraries
 
@@ -62,10 +56,6 @@ shard_it = kinesis.get_shard_iterator(StreamName="twitter_bigdata", ShardId=shar
 #connecting to the dynamoDB table
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('twitterDB')
-
-
-# In[ ]:
-
 
 #Parsing the tweets and setting a counter
 
@@ -109,7 +99,7 @@ while 1==1:
     time.sleep(1.0)
 
 
-# In[ ]:
+# Deleting Stream record by performing batch delete
 
 
 scan = table.scan()
