@@ -4,15 +4,22 @@ Using a DynamoDB table to capture specific tweet IDs aspects from Kinesis.Anothe
 At a high level, this project takes you through the following steps:
 
 Creating the DynamoDB table, with the tweet ID as the primary key.
+
 Loading Realtime ingestion data into dynamodb using Twitter API and by linking the Kinesis stream to DynamoDB, parsing and storing tweets.
+
 Create DynamoDB Streams on your DynamoDB table to capture deleted twitter items.
+
 Create a Lambda function to poll the DynamoDB stream and deliver batch records from streams to Firehose.
+
 Create a Firehose delivery stream to load the data into S3.
+
 Validate that the application works.
 
-#### Architecture of this workflow in AWS
+#### Architecture of workflow1 in AWS(Streaming Tweets to DDB)
 ![Architecture Diagram](images/StreamingImagetodynamodb.png)
-![Architecture Diagram](images/SStoringDeletedTweetss3.png)
+
+#### Architecture of workflow2 in AWS(Deleting Tweets and storing in S3)
+![Architecture Diagram](images/StoringDeletedTweetss3.png)
 
 
 #### What is AWS Dynamodb?

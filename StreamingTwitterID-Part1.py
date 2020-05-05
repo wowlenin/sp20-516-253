@@ -4,11 +4,7 @@
 # In[1]:
 
 
-#Reading in twitter credentials
-consumer_key = "fKBxE7eK2nLe3QkydT68yS9oj"
-consumer_secret = "IdHL4WzWfiiZcuLJnD5AMRvAt6mJRLBTm10cvfmOQrYumgdKno"
-access_token_key = "3102335155-oGG3d1KSGMSZUhzm6luqRsYDIyXWBBQGYtLLhYv"
-access_token_secret = "119ENyVxIVfhA2eyrWyWO6ViCgOiiy0HYLoWV8s6rIZk9"
+
 
 
 # In[60]:
